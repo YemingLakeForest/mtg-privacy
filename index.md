@@ -12,11 +12,29 @@ Publisher: **Merciless Studio** — contact: yeminghuang.lakeforest@gmail.com
 
 ## GeoDaily
 
-GeoDaily does **not** collect, store, or transmit any personal data. All
-game state (guesses, streaks, settings) stays entirely on your device in
-local storage. There are no accounts, no sign-in, no servers, and no
-network calls during gameplay. No analytics, no advertising, no tracking of
-any kind.
+### What we collect
+
+- **Game progress.** Your daily puzzle results (guesses, streaks, wins)
+  serialised as JSON for cross-device save sync.
+- **Anonymous account identifier (Firebase UID).** When you sign in,
+  Firebase Authentication issues a random string ID tied to your device
+  install, not to your real identity.
+
+We do **not** collect: real name, email address, phone number, location,
+device contacts, photos, advertising ID, or purchase history.
+
+### Where it's stored
+
+- Locally on your device
+- In **Google Cloud Firestore**, keyed by your Firebase UID
+
+Traffic between the app and Firestore is encrypted with TLS.
+
+### How we use it
+
+Exclusively to sync your game progress across devices. We do not sell,
+rent, or share your data with third parties. We do not profile users, show
+ads, or run analytics.
 
 ## Mind the Gap
 
